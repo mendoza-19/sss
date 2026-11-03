@@ -1,0 +1,137 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 360px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header {
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 25px;
+    background: #f7d2b7;
+    border-radius: 20px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    position: relative;
+    height: 70px;
+    ;
+}
+
+form {
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.header h1 {
+    font-size: 27px;
+    text-transform: uppercase;
+    color: #4a3525;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+}
+
+.header .icon1 {
+    width: 14%;
+    position: absolute;
+    right: 37%;
+}
+
+.header .icon2 {
+    width: 14%;
+    position: absolute;
+    left: 37%;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    color: #666;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ccc;
+    border-radius: 25px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s;
+}
+
+.form-group input:focus {
+    border-color: #007bff;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    transition: opacity 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-register {
+    background-color: #1f1f1f;
+    color: #fdfbf7;
+    border: none;
+}
+
+.btn-google {
+    background-color: #c18c5d;
+    color: #4a3525;
+    border: 1.5px solid #ccc;
+    margin-top: 12px;
+}
+
+.btn-google img {
+    width: 18px;
+    height: 18px;
+}
+
+.form-group.error input {
+    border-color: #dc3545;
+    /* Rojo */
+}
+
+.form-group.error .error-message {
+    color: #dc3545;
+    /* Rojo */
+    font-size: 12px;
+    margin-top: 5px;
+    display: block;
+}

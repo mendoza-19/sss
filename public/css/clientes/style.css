@@ -1,0 +1,663 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+html,
+body,
+main {
+    width: 100%;
+    height: 100%;
+}
+
+main {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.body-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.page-content {
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+    height: 100%;
+    box-sizing: border-box;
+    padding-bottom: 30px;
+}
+
+/* ------------------------------------------------------------
+ *  TARJETAS DE RESUMEN (STATS)
+ * ------------------------------------------------------------ */
+.cars-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    box-sizing: border-box;
+    width: 100%;
+    padding-bottom: 24px;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+.cars-container .card {
+    padding: 20px 24px;
+    color: #4a3525;
+    font-family: 'Inter', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    flex: 1;
+    min-width: 240px;
+    min-height: 120px;
+    background: #ffffff;
+    border-radius: 14px;
+    border-left: 5px solid #c18c5d;
+    box-shadow: 0 4px 14px rgba(74, 53, 37, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cars-container .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(74, 53, 37, 0.14);
+}
+
+.cars-container .card.card-activo {
+    border-left-color: #059669;
+}
+
+.cars-container .card.card-tendencia {
+    border-left-color: #059669;
+}
+
+.cars-container .card.card-inactivo {
+    border-left-color: #dc2626
+}
+
+.cars-container .card-header h2 {
+    font-size: 14px;
+    font-weight: 600;
+    color: #786455;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.cars-container .card-body p {
+    font-size: 28px;
+    font-weight: 700;
+    color: #382415;
+    margin: 0;
+}
+
+.cars-container .card.card-tendencia .card-body p {
+    color: #382415;
+}
+
+.cars-container .card.card-inactivo .card-body p {
+    color: #dc2626;
+}
+
+/* ------------------------------------------------------------
+ *  bar de la tabla clientes
+ * ------------------------------------------------------------ */
+
+.table-bar-container{
+    box-sizing: border-box;
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.customer-tabs {
+    display: flex;
+    gap: 4px;
+    width: 100%;
+    margin-bottom: 12px;
+    overflow-x: auto;
+    border-bottom: 1px solid #d7ccc8;
+}
+
+.customer-tab-btn {
+    flex: 0 0 auto;
+    min-height: 42px;
+    padding: 9px 16px;
+    border: 0;
+    border-bottom: 3px solid transparent;
+    background: transparent;
+    color: #786455;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.customer-tab-btn:hover,
+.customer-tab-btn.active {
+    color: #4a3525;
+}
+
+.customer-tab-btn.active {
+    border-bottom-color: #8b5a2b;
+    font-weight: 700;
+}
+
+.customer-tab-btn:focus-visible {
+    outline: 2px solid #8b5a2b;
+    outline-offset: -2px;
+}
+
+.table-bar-container .search-container{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    width: min(280px, 100%);
+    border-radius: 20px;
+    border: 2px solid #d7ccc8;
+    padding: 5px;
+}
+
+.table-bar-container .search-container:focus-within{
+    border-color: #8b5a2b;
+}
+
+.table-bar-container .search-container img{
+    padding-left: 5px;
+    width: 23px;
+}
+
+.table-bar-container .search-container button{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.table-bar-container .search-container input{
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+}
+
+.table-bar-container .search-container{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: flex;
+    width: min(280px, 100%);
+    border-radius: 20px;
+    border: 2px solid #d7ccc8;
+    padding: 5px;
+}
+
+.table-bar-container .search-container:focus-within{
+    border-color: #8b5a2b;
+}
+
+.table-bar-container .search-container img{
+    padding-left: 5px;
+    width: 23px;
+}
+
+.table-bar-container .search-container button{
+    cursor: pointer;
+    background-color: white;
+    border: none;
+}
+
+.table-bar-container .search-container input{
+    width: 100%;
+    min-width: 0;
+    border: none;
+    outline: none;
+}
+
+/* ------------------------------------------------------------
+ *  Tabla de clientes
+ * ------------------------------------------------------------ */
+
+ .table-container{
+    width: 100%;
+    height: 300px;
+     overflow: auto;
+ }
+
+.table-clientes{
+    overflow: hidden;
+    text-align: center;
+    width: 100%;
+    min-width: 720px;
+    border-radius: 20px;
+    border-collapse: collapse;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+}
+
+.table-clientes thead tr{
+    font-weight: 500;
+    color: #4a3525;
+    font-family: 'Inter', sans-serif;
+    height: 50px;
+    background-color: #c18c5d;
+}
+
+.table-clientes .Actions-container{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.customer-row-action {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    line-height: 0;
+    cursor: pointer;
+}
+
+.customer-row-action:focus-visible {
+    outline: 2px solid #8b5a2b;
+    outline-offset: 2px;
+}
+
+.customer-orders-open-button {
+    padding: 8px 12px;
+    border: 1px solid #8b5a2b;
+    border-radius: 6px;
+    background: #fff;
+    color: #4a3525;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.customer-orders-open-button:hover {
+    background: #f5eee8;
+}
+
+.customer-orders-open-button:focus-visible,
+.customer-orders-close:focus-visible {
+    outline: 2px solid #8b5a2b;
+    outline-offset: 2px;
+}
+
+.customer-orders-modal {
+    position: fixed;
+    z-index: 3000;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.customer-orders-modal[aria-hidden="false"] {
+    display: flex;
+}
+
+.customer-orders-backdrop {
+    position: absolute;
+    inset: 0;
+    background: rgba(25, 20, 17, 0.52);
+}
+
+.customer-orders-dialog {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(940px, 100%);
+    max-height: 86vh;
+    overflow: hidden;
+    padding: 24px;
+    border-radius: 10px;
+    background: #fff;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.24);
+}
+
+.customer-orders-heading {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+    color: #4a3525;
+}
+
+.customer-orders-heading h2 {
+    font-size: 20px;
+}
+
+.customer-orders-heading p {
+    margin-top: 4px;
+    color: #786455;
+}
+
+.customer-orders-close {
+    flex: 0 0 36px;
+    width: 36px;
+    height: 36px;
+    border: 0;
+    border-radius: 4px;
+    background: transparent;
+    color: #4a3525;
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.customer-orders-close:hover {
+    background: #f5eee8;
+}
+
+.customer-orders-table-wrap {
+    overflow: auto;
+    border: 1px solid #e6ddd6;
+}
+
+.customer-orders-table {
+    width: 100%;
+    min-width: 660px;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.customer-orders-table th,
+.customer-orders-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #eee8e3;
+    color: #4a3525;
+}
+
+.customer-orders-table th {
+    position: sticky;
+    top: 0;
+    background: #f5eee8;
+    font-weight: 700;
+}
+
+.customer-orders-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+@media (max-width: 600px) {
+    .customer-orders-modal {
+        padding: 10px;
+    }
+
+    .customer-orders-dialog {
+        max-height: 92vh;
+        padding: 16px;
+    }
+}
+
+.Actions-container{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.table-clientes img{
+    border-radius: 8px;
+    padding: 3px;
+    background-color: #d7ccc8;
+    width: 34px;
+    height: 34px;
+    cursor: pointer;
+}
+
+.table-clientes img:hover{
+    background-color: #c18c5d;
+    transform: scale(1.05);
+}
+
+.table-clientes strong{
+    color: #4a3525;
+    font-weight: bold;
+}
+
+.badge{
+    padding: 4px 10px;
+    border-radius: 10px;
+    background-color: #d7ccc8;
+}
+
+.badge-ok{
+    background-color: #eafaf1;
+    color: #1e8449;
+}
+
+.badge-bad{
+    background-color: #ffeaea;
+    color: #8f1b1b;
+}
+
+.loading-table-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+
+.loading-table{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #d7ccc8;
+    border-top: 2px solid #8b5a2b;
+    border-radius: 50%;
+    animation: tableloading 1s linear infinite;
+}
+
+@keyframes tableloading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+/* ------------------------------------------------------------
+ *  Modal assessment
+ * ------------------------------------------------------------ */
+
+ .modal-assessment{
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+ }
+
+ .form-modal-container{
+    line-height: 35px;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    background: white;
+    border: 2px solid #8b5a2b;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+ }
+
+ .form-modal-container span{
+    font-weight: 600;
+    color: #4a3525;
+ }
+
+ .form-modal-container h2{
+    text-align: center;
+    color: #4a3525;
+ }
+
+ .starts-content{
+    position: relative;
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+ }
+
+ .starts-content img{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+ }
+
+ .starts-content .stuffed{
+    position: absolute;
+    z-index: 1;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #8b5a2b;
+    box-sizing: border-box;
+    transition: width 0.2s ease;
+ }
+
+ .form-modal-container textarea{
+    outline: none;
+    width: 100%;
+    max-width: 100%;
+    height: 80px;
+    max-height: 80px;
+ }
+
+ .form-modal-container textarea:focus{
+    border: 2px solid #8b5a2b;
+ }
+
+ .form-modal-container .modal-cerrar{
+    padding: 10px 20px;
+    background-color: white;
+    color: #4a3525;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+ }
+
+ .form-modal-container .modal-cerrar:hover{
+    background-color: #f0e6df;
+ }
+
+/* ------------------------------------------------------------
+ *  Modal assessment
+ * ------------------------------------------------------------ */
+
+  .modal-address{
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+ }
+
+ .address-modal-container{
+    overflow-wrap: anywhere;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+    padding: 20px;
+    width: 300px;
+    min-height: 300px;
+    background: white;
+    border: 2px solid #8b5a2b;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+ }
+
+ .address-modal-container img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid #8b5a2b;
+    box-shadow: 2px 3px 15px 3px rgba(0, 0, 0, 0.2);
+ }
+
+ .address-modal-container .btn-content button{
+    padding: 10px 20px;
+    background-color: white;
+    color: #4a3525;
+    border: 2px solid #d7ccc8;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+ }
+
+ .address-modal-container .btn-content button:hover{
+    background-color: #f0e6df;
+ }
+
+ /* ------------------------------------------------------------
+ *  Modal assessment
+ * ------------------------------------------------------------ */
+
+ .modal-loading{
+    display: none;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+ }
+
+ .modal-loading-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 35px;
+    padding: 20px;
+    width: 300px;
+    height: 220px;
+    background: white;
+    border: 2px solid #8b5a2b;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    color: #4a3525;
+ }
+
+ .modal-loading-content .loader{
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    border-radius: 50%;
+    border: 2px solid #d7ccc8;
+    border-top: 2px solid #8b5a2b;
+    animation: loading 1s linear infinite;
+ }
+
+ @keyframes loading{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+ }

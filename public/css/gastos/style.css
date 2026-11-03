@@ -1,0 +1,203 @@
+.monthly-expenses-page {
+    --expense-ink: #202a31;
+    --expense-muted: #68757d;
+    --expense-rule: #dce3e5;
+    --expense-accent: #186b62;
+    width: min(100%, 1480px);
+    margin: 0 auto;
+    color: var(--expense-ink);
+}
+
+.expenses-period-bar {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 18px 0;
+    border-top: 1px solid var(--expense-rule);
+    border-bottom: 1px solid var(--expense-rule);
+}
+
+.expenses-month-filter {
+    display: flex;
+    align-items: end;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.expenses-month-filter label,
+.expenses-entry-form label {
+    display: block;
+    margin-bottom: 6px;
+    color: var(--expense-muted);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.expenses-month-filter input,
+.expenses-entry-form input,
+.expenses-entry-form select {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    min-height: 44px;
+    padding: 9px 12px;
+    border: 1px solid #cbd5d2;
+    border-radius: 6px;
+    background: #fff;
+    color: var(--expense-ink);
+    font: inherit;
+    font-size: 14px;
+    transition: border-color 140ms ease, box-shadow 140ms ease;
+}
+
+.expenses-month-filter input {
+    width: 190px;
+}
+
+.expenses-month-filter input:hover,
+.expenses-entry-form input:hover,
+.expenses-entry-form select:hover {
+    border-color: #93aaa4;
+}
+
+.expenses-month-filter input:focus-visible,
+.expenses-entry-form input:focus-visible,
+.expenses-entry-form select:focus-visible {
+    outline: none;
+    border-color: var(--expense-accent);
+    box-shadow: 0 0 0 3px rgba(24, 107, 98, 0.14);
+}
+
+.expenses-entry-form input::placeholder {
+    color: #8a9692;
+}
+
+.expenses-total {
+    display: grid;
+    gap: 3px;
+    text-align: right;
+}
+
+.expenses-total span {
+    color: var(--expense-muted);
+    font-size: 13px;
+}
+
+.expenses-total strong {
+    color: var(--expense-accent);
+    font-size: 1.65rem;
+    font-variant-numeric: tabular-nums;
+}
+
+.expenses-category-summary {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin: 0;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--expense-rule);
+}
+
+.expenses-category-summary div {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.expenses-category-summary dt {
+    color: var(--expense-muted);
+    font-size: 13px;
+}
+
+.expenses-category-summary dd {
+    margin: 0;
+    font-weight: 700;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+}
+
+.expenses-entry-section,
+.expenses-list-section {
+    margin-top: 26px;
+}
+
+.expenses-entry-section h2,
+.expenses-list-section h2 {
+    margin: 0 0 14px;
+    font-size: 1.15rem;
+}
+
+.expenses-entry-form {
+    display: grid;
+    grid-template-columns: minmax(130px, 0.8fr) minmax(150px, 0.9fr) minmax(190px, 1.5fr) minmax(130px, 0.8fr) auto;
+    align-items: end;
+    gap: 12px;
+    padding: 0 0 22px;
+    border-bottom: 1px solid var(--expense-rule);
+}
+
+.expenses-entry-form .recipe-form-group {
+    margin: 0;
+}
+
+.expenses-entry-form button {
+    min-height: 44px;
+    padding-inline: 16px;
+    white-space: nowrap;
+}
+
+.expenses-form-feedback {
+    margin: 12px 0 0;
+    color: var(--expense-accent);
+}
+
+.expenses-form-feedback.is-error {
+    color: #a52c2c;
+}
+
+.expenses-entry-form button:disabled {
+    cursor: wait;
+    opacity: 0.7;
+}
+
+.expenses-list-section form {
+    margin: 0;
+}
+
+@media (max-width: 900px) {
+    .expenses-entry-form {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .expenses-entry-form button {
+        justify-self: start;
+    }
+}
+
+@media (max-width: 600px) {
+    .expenses-period-bar {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 18px;
+    }
+
+    .expenses-total {
+        text-align: left;
+    }
+
+    .expenses-category-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .expenses-entry-form {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .expenses-entry-form button {
+        grid-column: 1;
+        justify-self: stretch;
+    }
+}

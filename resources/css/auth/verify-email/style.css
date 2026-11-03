@@ -1,0 +1,190 @@
+/* ==========================================================================
+   1. CONFIGURACIÓN GENERAL Y VARIABLES
+   ========================================================================== */
+@import url('https://googleapis.com');
+
+:root {
+    --color-bg: #fdfaf6;
+    /* Fondo crema suave estilo harina/masa */
+    --color-card: #ffffff;
+    /* Fondo blanco para la tarjeta */
+    --color-primary: #8b5a2b;
+    /* Café tostado / pan horneado */
+    --color-primary-hover: #6f441f;
+    --color-secondary: #f4e3cf;
+    /* Trigo claro / masa fresca */
+    --color-secondary-hover: #e9d2b7;
+    --color-text-main: #3e2723;
+    /* Café oscuro para máxima legibilidad */
+    --color-text-muted: #795548;
+    /* Café medio para textos secundarios */
+    --shadow: 0 10px 30px rgba(139, 90, 43, 0.1);
+    /* Sombra suave cobriza */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--color-bg);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* ==========================================================================
+   2. TARJETA DE VERIFICACIÓN (CONTENEDOR)
+   ========================================================================== */
+.verification-container {
+    background-color: var(--color-card);
+    max-width: 480px;
+    width: 100%;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    border: 1px solid rgba(139, 90, 43, 0.05);
+}
+
+/* ==========================================================================
+   3. LOGO Y ENCABEZADO
+   ========================================================================== */
+.brand-header {
+    margin-bottom: 25px;
+}
+
+.bakery-icon {
+    font-size: 48px !important;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    padding: 12px;
+    border-radius: 15px;
+    margin-bottom: 12px;
+}
+
+.brand-header h1 {
+    margin-top: 25px;
+    font-size: 24px;
+    color: var(--color-primary);
+    font-weight: 700;
+}
+
+/* ==========================================================================
+   4. ILUSTRACIÓN CENTRAL
+   ========================================================================== */
+.email-illustration {
+    margin-bottom: 25px;
+}
+
+.mail-icon {
+    font-size: 25px !important;
+    color: var(--color-text-main);
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animación de flotado sutil para el sobre */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* ==========================================================================
+   5. CONTENIDO DEL MENSAJE
+   ========================================================================== */
+
+.message-content h2 {
+    font-size: 20px;
+    color: var(--color-text-main);
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.message-content p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* ==========================================================================
+   6. BOTONES DE ACCIÓN
+   ========================================================================== */
+.action-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 25px;
+}
+
+.btn {
+    width: 100%;
+    padding: 14px 20px;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+}
+
+.btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(139, 90, 43, 0.2);
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-hover);
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   7. ENLACES DE SOPORTE Y PIE
+   ========================================================================== */
+.footer-support p {
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.footer-support a {
+    color: var(--color-primary);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.footer-support a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   8. AJUSTES PARA PANTALLAS PEQUEÑAS (MÓVILES)
+   ========================================================================== */
+@media (max-width: 480px) {
+    .verification-container {
+        padding: 30px 20px;
+    }
+
+    .brand-header h1 {
+        font-size: 21px;
+    }
+
+    .message-content h2 {
+        font-size: 18px;
+    }
+}

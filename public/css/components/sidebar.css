@@ -1,0 +1,177 @@
+.sidebar-contain {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: clamp(220px, 18vw, 280px);
+    flex: 0 0 clamp(220px, 18vw, 280px);
+    height: 100%;
+    min-height: 0;
+    background: #8b5a2b;
+    box-sizing: border-box;
+}
+
+.sidebar-header {
+    position: relative;
+    top: 10px;
+    width: 100%;
+    height: 85px;
+    box-sizing: border-box;
+}
+
+.sidebar-logo {
+    position: absolute;
+    cursor: pointer;
+    right: 10px;
+    width: 100px;
+    height: 85px;
+}
+
+.sidebar-toggle-button {
+    fill: #4a3525;
+    margin-top: 15px;
+    position: fixed;
+    z-index: 1001;
+    cursor: pointer;
+    left: 10px;
+    width: 50px;
+    height: 50px;
+    transition: all 0.5s ease;
+}
+
+.sidebar-toggle-button:hover {
+    scale: 1.1;
+}
+
+.sidebar-toggle-button-closed {
+    transform: translate(-10px, 45px);
+}
+
+.sidebar-contain-hidden {
+    width: 0;
+    flex-basis: 0;
+    overflow: hidden;
+}
+
+.sidebar-contain-show {
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.sidebar-menu {
+    flex: 1 1 0%;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 0;
+    margin-top: 20px;
+    padding-bottom: 12px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    scrollbar-color: #4a3525 #8b5a2b;
+    scrollbar-width: thin;
+}
+
+.sidebar-footer {
+    display: flex;
+    flex: 0 0 58px;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #4a3525;
+    background: #8b5a2b;
+}
+
+.sidebar-settings-icon {
+    display: grid;
+    width: 38px;
+    height: 38px;
+    place-items: center;
+    border-radius: 6px;
+    color: #4a3525;
+}
+
+.sidebar-settings-icon img {
+    display: block;
+    width: 22px;
+    height: 22px;
+}
+
+.option-menu {
+    gap: 20px;
+    border-top: 1px solid #4a3525;
+    border-bottom: 1px solid #4a3525;
+    box-sizing: border-box;
+    cursor: pointer;
+    display: flex;
+    flex: 0 0 50px;
+    overflow: hidden;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    padding-left: 10px;
+    transition-duration: 0.5s;
+}
+
+.option-menu img {
+    width: 40px;
+    height: 40px;
+}
+
+.option-menu svg {
+    overflow: unset;
+    width: 40px;
+    height: 40px;
+}
+
+.option-menu:hover {
+    background: #4a3525;
+}
+
+.option-menu:hover a {
+    color: #fff;
+}
+
+.option-menu:hover svg {
+    fill: #fff;
+}
+
+.option-menu a {
+    text-decoration: none;
+    color: #4a3525;
+    font-family: fantasy;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.option-menu-selected {
+    background: #4a3525;
+}
+
+.option-menu-selected a,
+.option-menu-selected svg {
+    color: #fff;
+    fill: #fff;
+}
+
+@media (max-width: 768px) {
+    .sidebar-contain {
+        position: absolute;
+        z-index: 1501;
+        width: 0;
+        flex-basis: 0;
+        max-width: 82vw;
+    }
+
+    .sidebar-contain-hidden {
+        width: min(280px, 82vw);
+        flex-basis: min(280px, 82vw);
+        overflow: hidden;
+    }
+
+    .sidebar-toggle-button{
+        top: 90px;
+    }
+
+    .sidebar-toggle-button-closed {
+        transform: translate(0px, -70px);
+    }
+}

@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.title-report {
+    text-align: center;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+.title-report h2 {
+    padding-top: 2rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.title-report p {
+    font-size: 1.2rem;
+}
+
+.table-providers-container {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 2rem;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.table-providers-container table {
+    margin-top: 2rem;
+    border-bottom: 2px solid #959595;
+    ;
+}
+
+.table-providers-container tbody {
+    font-weight: 900;
+}

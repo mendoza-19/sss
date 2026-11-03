@@ -49,6 +49,22 @@ return [
             'local_domain' => env('MAIL_EHLO_DOMAIN', parse_url((string) env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
         ],
 
+        'smtp2' => [
+            'transport' => 'smtp',
+            'scheme' => env('MAIL_SCHEME2'),
+            'url' => env('MAIL_URL2'),
+            'host' => env('MAIL_HOST2', '127.0.0.1'),
+            'port' => env('MAIL_PORT2', 2525),
+            'username' => env('MAIL_USERNAME2'),
+            'password' => env('MAIL_PASSWORD2'),
+            'timeout' => null,
+            'local_domain' => env('MAIL_EHLO_DOMAIN2', parse_url((string) env('APP_URL', 'http://localhost'), PHP_URL_HOST)),
+            'from' => [
+                'address' => env('MAIL_FROM_ADDRESS2', env('MAIL_FROM_ADDRESS', 'hello@example.com')),
+                'name' => env('MAIL_FROM_NAME2', env('MAIL_FROM_NAME', env('APP_NAME', 'Laravel'))),
+            ],
+        ],
+
         'ses' => [
             'transport' => 'ses',
         ],

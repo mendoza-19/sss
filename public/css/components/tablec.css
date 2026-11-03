@@ -1,0 +1,34 @@
+/*Tabla*/
+
+.table-component {
+    width: 100%;
+    border-collapse: collapse;
+    box-sizing: border-box;
+}
+
+.table-component thead {
+    width: 100%;
+    height: 50px;
+    background-color: #c18c5d;
+    box-sizing: border-box;
+}
+
+.table-component thead tr {
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.table-component tbody tr:hover {
+    background-color: #f7d2b7;
+}
+
+.table-component thead tr th {
+    font-size: 20px;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    color: #4a3525;
+    box-sizing: border-box;
+}
+
+/*fin*/

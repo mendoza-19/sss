@@ -1,0 +1,1024 @@
+main{display:flex;width:100%;height:100vh;min-height:0;box-sizing:border-box}.body-content{display:flex;flex:1;flex-direction:column;min-width:0;min-height:0;height:100vh}.page-content{flex:1;min-width:0;min-height:0;overflow-y:auto;padding:24px 5% 32px;box-sizing:border-box}
+.sales-page{width:100%;max-width:1280px;margin:0 auto;color:#26332e}.sales-heading{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:12px 0 22px}.sales-heading h1{margin:0;color:#24483b;font-size:26px}.sales-heading p{margin:5px 0 0;color:#68736e}.sales-primary-button,.sales-secondary-button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:9px 16px;border:1px solid #236a52;border-radius:4px;background:#236a52;color:#fff;font:inherit;font-weight:600;cursor:pointer}.sales-primary-button:hover{background:#194e3d}.sales-secondary-button{border-color:#c8d3cd;background:#fff;color:#334c42}.sales-secondary-button:hover{background:#eef3f0}.sales-summary{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid #e0e8e3;border-radius:5px;background:#fff}.sales-summary>div{display:flex;min-height:78px;flex-direction:column;justify-content:center;gap:5px;padding:12px 18px;border-right:1px solid #e7ede9}.sales-summary>div:last-child{border-right:0}.sales-summary span{color:#69766f;font-size:13px}.sales-summary strong{color:#24483b;font-size:20px}.sales-toolbar{margin:20px 0}.sales-table-container{max-height:60vh;overflow:auto;border:1px solid #e1e8e3;border-radius:5px;background:#fff}.sales-table{width:100%;border-collapse:collapse;text-align:left}.sales-table th,.sales-table td{padding:13px 12px;border-bottom:1px solid #e8eeea;vertical-align:middle}.sales-table th{position:sticky;top:0;background:#eff5f1;color:#24483b;font-size:13px;text-transform:uppercase}.sales-table td{color:#36433d;font-size:14px}.sales-table tbody tr:hover{background:#f6faf7}.sales-action-button{padding:7px 12px;border:1px solid #c8d3cd;border-radius:4px;background:#fff;color:#24523f;font:inherit;cursor:pointer}.sales-action-button:hover{border-color:#236a52;background:#eef6f1}.sales-empty{text-align:center;color:#707b75}.sales-feedback{margin:12px 0;padding:12px 14px;border-left:3px solid #267454;background:#eef7f1;color:#25543f}.sales-feedback-error{border-color:#bb493a;background:#fff1ef;color:#772d25}.sales-feedback ul{margin:0;padding-left:20px}
+.sales-modal{position:fixed;inset:0;z-index:11000;display:none;align-items:center;justify-content:center;padding:20px;background:rgba(16,35,27,.55)}.sales-modal[aria-hidden="false"]{display:flex}.sales-modal-card{width:min(720px,100%);max-height:90vh;overflow:auto;border-radius:6px;background:#fff;box-shadow:0 20px 55px rgba(13,32,24,.24)}.sales-modal-card>header{display:flex;align-items:center;justify-content:space-between;padding:20px 24px;border-bottom:1px solid #e4ebe6}.sales-modal-card h2{margin:0;color:#24483b;font-size:20px}.sales-close{width:34px;height:34px;border:0;background:transparent;color:#45564e;font-size:27px;cursor:pointer}.sales-modal form{padding:20px 24px}.sales-form-row,.sales-add-item{display:flex;align-items:flex-end;gap:14px;margin-bottom:18px}.sales-form-row label,.sales-add-item label{display:flex;min-width:0;flex:1;flex-direction:column;gap:6px;color:#35483f;font-size:13px;font-weight:600}.sales-form-row input,.sales-add-item input,.sales-add-item select{width:100%;min-height:40px;padding:9px 10px;border:1px solid #cbd6cf;border-radius:4px;background:#fff;color:#25352d;font:inherit;box-sizing:border-box}.sales-product-select{flex:2!important}.sales-quantity{max-width:120px}.sales-lines-container{max-height:300px;overflow:auto;border:1px solid #e2eae5;border-radius:4px}.sales-lines-table{width:100%;border-collapse:collapse;text-align:left}.sales-lines-table th,.sales-lines-table td{padding:11px 12px;border-bottom:1px solid #e8eeea}.sales-lines-table th{position:sticky;top:0;background:#eff5f1;color:#24483b;font-size:12px}.sales-lines-table td{color:#35433c;font-size:14px}.sales-remove-item{border:0;background:transparent;color:#9a3d31;font:inherit;cursor:pointer}.sales-remove-item:hover{text-decoration:underline}.sales-total-line{display:flex;justify-content:space-between;gap:12px;margin:15px 0 0;color:#45564e}.sales-total-line strong{color:#24483b}.sales-inline-error{margin:12px 0 0;color:#a33427;font-size:13px}.sales-modal form footer,.sales-details-card>footer{display:flex;justify-content:flex-end;gap:10px;margin-top:22px}.sales-detail-meta{margin:18px 24px;color:#68736e}.sales-details-card .sales-lines-container{margin:0 24px}.sales-details-card>.sales-total-line{margin-right:24px;margin-left:24px}.sales-details-card>footer{padding:0 24px 20px}
+@media(max-width:700px){.page-content{padding:18px 16px 26px}.sales-heading{align-items:flex-start;flex-direction:column}.sales-heading .sales-primary-button{width:100%}.sales-summary{grid-template-columns:1fr}.sales-summary>div{min-height:58px;border-right:0;border-bottom:1px solid #e7ede9}.sales-summary>div:last-child{border-bottom:0}.sales-table{min-width:720px}.sales-modal{padding:12px}.sales-modal-card>header,.sales-modal form{padding:17px}.sales-form-row,.sales-add-item{align-items:stretch;flex-direction:column}.sales-quantity{max-width:none}.sales-details-card .sales-detail-meta{margin:16px 17px}.sales-details-card .sales-lines-container{margin:0 17px}.sales-details-card>.sales-total-line{margin-right:17px;margin-left:17px}.sales-details-card>footer{padding:0 17px 17px}.sales-modal form footer{flex-wrap:wrap}.sales-modal form footer button{flex:1}}
+
+.sales-page{color:#332820}.sales-heading h1,.sales-modal-card h2{color:#4a3525}.sales-heading p,.sales-summary span,.sales-detail-meta{color:#656565}.sales-primary-button{border-color:#8b5a2b;background:#8b5a2b}.sales-primary-button:hover{border-color:#6d441f;background:#6d441f}.sales-secondary-button{border-color:#d7ccc8;color:#4a3525}.sales-secondary-button:hover{background:#f0e6df}.sales-summary,.sales-table-container{border-color:#e2d8cf}.sales-summary>div{border-color:#e2d8cf}.sales-summary strong{color:#4a3525}.sales-table th,.sales-lines-table th{background:#f8f5f2;color:#4a3525}.sales-table th,.sales-table td,.sales-lines-table th,.sales-lines-table td{border-color:#f0e6df}.sales-table tbody tr:hover{background:#fdf6f0}.sales-action-button{border-color:#d7ccc8;color:#4a3525}.sales-action-button:hover{border-color:#8b5a2b;background:#f0e6df}.sales-empty{color:#766b63}.sales-feedback-error,.sales-page .recipe-feedback-error{margin:12px 0;padding:12px 14px;border:1px solid #efc9c5;border-radius:8px;background:#f7e6e3;color:#8c3025}.sales-modal{background:rgba(51,40,32,.55)}.sales-modal-card{box-shadow:0 20px 55px rgba(51,40,32,.24)}.sales-modal-card>header{border-color:#e2d8cf}.sales-close{color:#4a3525}.sales-form-row label,.sales-add-item label{color:#4a3525}.sales-form-row input,.sales-add-item input,.sales-add-item select{border-color:#d7ccc8;color:#332820}.sales-total-line,.sales-total-line strong{color:#4a3525}.sales-remove-item{color:#8c3025}
+html,body{width:100%;min-height:100%;margin:0}body{overflow:hidden;font-family:'Inter','Segoe UI',sans-serif}button,input,select,textarea{font-family:inherit}.sales-modal{background:rgba(0,0,0,.65)}.sales-modal-card{max-height:85vh;border:2px solid #8b5a2b;border-radius:20px}.sales-modal-card h2{font-family:'Open Sans',sans-serif;font-size:22px;font-weight:700}
+.sales-page{width:100%;max-width:1280px;margin:0 auto}.sales-modal{z-index:10000}.sales-modal-card{width:min(720px,100%);padding:24px}.sales-details-card{width:min(600px,100%)}.sales-modal form{padding:0}.sales-add-item{display:flex;align-items:flex-end;gap:12px;margin:0 0 16px}.sales-add-item .recipe-form-group{min-width:0}.sales-product-select{flex:1}.sales-quantity{flex:0 0 120px}.sales-add-item button{flex-shrink:0}.sales-modal .sales-lines-container{height:200px;max-height:35vh;min-height:120px;margin-top:16px;border-radius:12px}.sales-total-line{display:flex;justify-content:space-between;gap:12px;margin:12px 0 0;color:#4a3525}.sales-total-line strong{color:#4a3525}.sales-inline-error{margin:12px 0 0;color:#8c3025;font-size:13px}.sales-details-card .sales-detail-meta{margin:0 0 16px;color:#656565}.sales-details-card .sales-lines-container{margin:0}.sales-modal .recipe-modal-actions{margin-top:20px}.sales-remove-item{border:0;background:transparent;color:#8c3025;font:inherit;cursor:pointer}.sales-remove-item:hover{text-decoration:underline}
+@media(max-width:700px){.sales-modal{padding:12px}.sales-modal-card{padding:18px}.sales-add-item{align-items:stretch;flex-direction:column}.sales-quantity{flex-basis:auto}.sales-add-item button{align-self:flex-start}.sales-modal .sales-lines-container{max-height:30vh}}
+.sales-modal-card{display:flex;width:min(720px,calc(100vw - 32px));height:min(680px,calc(100dvh - 32px));max-height:calc(100dvh - 32px);flex-direction:column;overflow:hidden}.sales-modal-card form{display:flex;flex:1;min-height:0;flex-direction:column;overflow-y:auto;overscroll-behavior:contain}.sales-details-card{width:min(720px,calc(100vw - 32px));height:min(560px,calc(100dvh - 32px))}.sales-details-card .sales-lines-container{flex:1;min-height:0;max-height:none;overflow:auto}.sales-details-card .sales-lines-container .recipe-table{width:100%;table-layout:fixed}.sales-details-card .sales-lines-container th,.sales-details-card .sales-lines-container td{overflow-wrap:anywhere}@media(max-width:700px){.sales-modal-card{width:calc(100vw - 24px);height:calc(100dvh - 24px);max-height:calc(100dvh - 24px)}.sales-details-card{height:calc(100dvh - 24px)}.sales-details-card .sales-lines-container{max-height:none}}
+.sale-correlation-link{padding:2px 4px;border:0;background:transparent;color:#4a3525;font:inherit;font-weight:600;cursor:pointer}.sale-correlation-link:hover{text-decoration:underline}
+.sales-details-summary{flex:0 0 auto;margin:18px 0 0;padding-top:12px;border-top:1px solid #eadfd5;color:#4a3525}.sales-details-summary p{display:flex;justify-content:space-between;gap:16px;margin:6px 0}.sales-details-summary strong{font-weight:600}.sales-details-summary .sales-details-total{padding-top:8px;border-top:1px solid #eadfd5;font-size:16px}
+.sales-details-card{border-color:#8b5a2b;background:#fff;color:#332820}.sales-details-card .recipe-modal-heading{padding:12px 14px;border:0;border-radius:4px;background:#fff!important}.sales-details-card .recipe-modal-heading h2{color:#4a3525}.sales-details-card .sales-detail-meta,.sales-details-card .sales-details-summary{color:#4a3525}.sales-details-card .sales-details-summary{border-color:#eadfd5}.sales-details-card .sales-details-summary .sales-details-total{border-color:#eadfd5}.sales-details-card .sales-lines-container{background:#fff!important}.sales-details-card .recipe-table,.sales-details-card .recipe-table thead,.sales-details-card .recipe-table tbody,.sales-details-card .recipe-table tr,.sales-details-card .recipe-table th,.sales-details-card .recipe-table td{background:#fff!important;color:#4a3525!important}.sales-details-card .recipe-table th,.sales-details-card .recipe-table td{border-color:#e2d8cf}.sales-details-card .recipe-table tbody tr:hover{background:#fff!important}.sales-page .recipe-table-container,.sales-details-card .sales-lines-container{border-color:#8b5a2b}.sales-details-summary p,.sales-details-summary strong{color:#4a3525}.sales-details-card .recipe-modal-actions .recipe-secondary-button{border-color:#d7ccc8;color:#4a3525}.sales-details-card .recipe-modal-actions .recipe-secondary-button:hover{background:#f0e6df}
+
+/* --- TABS DE VENTAS Y PEDIDOS --- */
+.sales-heading-actions { display: flex; align-items: center; gap: 10px; }
+.sales-page-subtitle { margin: 4px 0 0; color: #656565; font-size: 14px; }
+.sales-tabs-nav { display: flex; gap: 8px; margin: 16px 0 20px; border-bottom: 2px solid #e2d8cf; }
+.sales-search-toolbar { display: flex; justify-content: flex-end; margin: -8px 0 12px; }
+.sales-search-card { width: min(460px, calc(100vw - 32px)); height: auto; max-height: none; padding: 24px; }
+.sales-search-form { display: grid; gap: 8px; margin-top: 8px; }
+.sales-search-form label { color: #4a3525; font-size: 13px; font-weight: 600; }
+.sales-search-form input { width: 100%; min-height: 42px; padding: 9px 10px; border: 1px solid #d7ccc8; border-radius: 4px; background: #fff; color: #332820; font: inherit; box-sizing: border-box; }
+.sales-search-form input:focus { outline: 2px solid rgba(139,90,43,.22); border-color: #8b5a2b; }
+.sales-search-card .recipe-modal-actions { justify-content: flex-end; margin-top: 20px; }
+.sales-tab-btn { display: inline-flex; align-items: center; gap: 8px; padding: 10px 18px; border: none; background: transparent; color: #656565; font-size: 15px; font-weight: 600; cursor: pointer; border-bottom: 3px solid transparent; margin-bottom: -2px; transition: all 0.2s ease; }
+.sales-tab-btn:hover { color: #8b5a2b; }
+.sales-tab-btn.active { color: #8b5a2b; border-bottom-color: #8b5a2b; font-weight: 700; }
+.sales-tab-content { display: none; }
+.sales-tab-content.active { display: block; }
+
+/* --- BADGES Y ETIQUETAS --- */
+.sales-badge-count { display: inline-flex; align-items: center; justify-content: center; min-width: 20px; height: 20px; padding: 0 6px; border-radius: 10px; background: #8b5a2b; color: #fff; font-size: 11px; font-weight: 700; line-height: 1; }
+.sales-badge-count.pending-pulse { background: #d97706; }
+.badge-tag { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 12px; font-size: 12px; font-weight: 600; line-height: 1.2; }
+.badge-tag.badge-pedido { background: #eef2ff; color: #4338ca; border: 1px solid #c7d2fe; }
+.badge-tag.badge-local { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+.badge-tag.badge-estado-pagada { background: #ecfdf5; color: #047857; border: 1px solid #a7f3d0; }
+.badge-tag.badge-estado-pendiente { background: #fef3c7; color: #92400e; border: 1px solid #fde68a; }
+
+/* --- BOTÓN COBRAR EN TABLA PEDIDOS --- */
+.btn-cobrar-action { padding: 6px 14px; font-size: 13px; white-space: nowrap; }
+
+/* --- MODAL PROCESAR PEDIDO --- */
+.order-info-card { background: #faf7f4; border: 1px solid #e8dfd7; border-radius: 8px; padding: 14px 18px; margin-bottom: 16px; }
+.order-info-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+.order-info-item span { display: block; font-size: 12px; color: #656565; margin-bottom: 2px; }
+.order-info-item strong { font-size: 14px; color: #4a3525; }
+.sale-origin-meta { background: #fdfaf6; border: 1px solid #e8dfd7; border-radius: 6px; padding: 10px 14px; margin-bottom: 14px; font-size: 13px; color: #4a3525; }
+.sale-origin-meta strong { color: #8b5a2b; }
+
+.seller-sales-history-modal.sales-details-card { width: min(1100px, calc(100vw - 48px)); height: auto; max-height: calc(100dvh - 40px); overflow: hidden; }
+.seller-sales-history-modal .sales-lines-container { width: 100%; max-height: min(58vh, 500px); overflow: auto; border: 1px solid #e2d8cf; border-radius: 6px; }
+.seller-sales-history-table { width: 100%; min-width: 900px; table-layout: fixed; }
+.seller-sales-history-table th { padding: 13px 14px; white-space: nowrap; }
+
+.sales-production-select { width: 100%; min-width: 138px; min-height: 36px; padding: 7px 9px; border: 1px solid #d7ccc8; border-radius: 4px; background: #fff; color: #4a3525; font: inherit; font-size: 13px; }
+.sales-production-select:focus-visible { outline: 2px solid rgba(139,90,43,.22); border-color: #8b5a2b; }
+.sales-production-select:disabled { opacity: .65; cursor: wait; }
+.seller-sales-history-table td { padding: 13px 14px; vertical-align: top; white-space: nowrap; }
+.seller-sales-history-table td:last-child { white-space: normal; overflow-wrap: anywhere; line-height: 1.45; }
+.seller-sales-history-table tbody tr:nth-child(even) td { background: #faf8f5 !important; }
+.seller-history-detail-list { display: grid; gap: 7px; margin: 0; padding: 0; list-style: none; }
+.seller-history-detail-list > li:not(.seller-history-incident) { padding: 5px 0; border-bottom: 1px solid #eee8e2; }
+.seller-history-incident { padding: 8px 10px; border-left: 3px solid #bd8233; border-radius: 4px; background: #fff7e9; }
+.seller-history-incident-heading { display: flex; justify-content: space-between; gap: 10px; margin-bottom: 4px; color: #77521f; font-size: 12px; font-weight: 700; }
+.seller-history-incident-heading span { flex: 0 0 auto; }
+.seller-history-incident p { margin: 0; color: #554a3a; overflow-wrap: anywhere; }
+
+@media (max-width: 700px) {
+	.seller-sales-history-modal.sales-details-card { width: calc(100vw - 20px); max-height: calc(100dvh - 24px); }
+	.seller-sales-history-modal .sales-lines-container { max-height: 62vh; }
+	.seller-sales-history-table { display: block; min-width: 0; }
+	.seller-sales-history-table thead { display: none; }
+	.seller-sales-history-table tbody { display: grid; gap: 10px; padding: 10px; }
+	.seller-sales-history-table tbody tr { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); overflow: hidden; border: 1px solid #e5ddd5; border-radius: 6px; background: #fff; }
+	.seller-sales-history-table tbody td { display: flex; min-width: 0; flex-direction: column; gap: 4px; padding: 9px 10px; border-bottom: 1px solid #eee8e2; white-space: normal; overflow-wrap: anywhere; }
+	.seller-sales-history-table tbody td::before { content: attr(data-label); color: #74695f; font-size: 11px; font-weight: 700; }
+	.seller-sales-history-table tbody td:last-child { grid-column: 1 / -1; }
+}
+
+.seller-assignments-page .recipe-page-heading { margin-bottom: 18px; }
+.seller-assignment-subtitle { margin: 6px 0 0; color: #68736e; font-size: 14px; }
+.seller-assignment-table-container { overflow-x: auto; border-color: #e2e8e3; background: #fff; }
+.seller-assignment-tabs { margin-top: 0; }
+.seller-assignments-table tbody tr[hidden] { display: none !important; }
+.seller-assignments-table { min-width: 760px; }
+.seller-assignments-table thead th { background: #f1f5f2; color: #284638; }
+.seller-assignments-table tbody td { padding: 18px 14px; vertical-align: top; }
+.seller-assignments-table tbody tr[data-assignment-id] { border-left: 3px solid #6f9e7d; }
+.seller-assignment-date { color: #53645a; font-size: 13px; font-weight: 600; }
+.seller-assigned-units { display: block; color: #24483b; font-size: 26px; line-height: 1.1; }
+.seller-units-caption { display: block; margin-top: 5px; color: #68736e; font-size: 12px; }
+.seller-assignment-status { display: inline-flex; align-items: center; margin-bottom: 12px; padding: 5px 9px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+.seller-assignment-status.is-pending { background: #fff3d8; color: #78520a; }
+.seller-assignment-status.is-closed { background: #e8f4eb; color: #286440; }
+.seller-closeout-complete { margin: 12px 0 0; }
+.seller-closeout-form { padding: 14px; border: 1px solid #e1e8e3; border-radius: 6px; background: #f8faf8; }
+.seller-closeout-form .recipe-form-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+.seller-closeout-form .recipe-form-group label { display: block; margin-bottom: 5px; color: #43574b; font-size: 12px; font-weight: 700; }
+.seller-closeout-form input,.seller-closeout-form select,.seller-closeout-form textarea { width: 100%; min-height: 40px; padding: 9px 10px; border: 1px solid #ccd7cf; border-radius: 4px; background: #fff; color: #26332e; font: inherit; }
+.seller-closeout-form textarea { resize: vertical; }
+.seller-closeout-form .recipe-primary-button { margin-top: 12px; }
+.seller-close-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; margin-bottom: 10px; }
+.seller-close-summary p { margin: 0; padding: 10px; border: 1px solid #e1e8e3; border-radius: 5px; background: #f8faf8; color: #68736e; font-size: 12px; }
+.seller-close-summary strong { display: block; margin-top: 4px; color: #24483b; font-size: 17px; }
+.seller-incident { margin: 8px 0 0; padding: 9px 11px; border-left: 3px solid #d59a3a; background: #fff8e9; color: #5e4c2b; font-size: 13px; }
+.seller-incident small { color: #78653f; font-weight: 700; }
+
+@media (max-width: 700px) {
+	.seller-assignments-page .recipe-page-heading { align-items: flex-start; }
+	.seller-closeout-form .recipe-form-grid { grid-template-columns: 1fr; }
+	.seller-close-summary { grid-template-columns: 1fr; }
+}
+
+.seller-assignments-page { max-width: 1120px; color: #293d33; }
+.seller-assignments-page .seller-assignments-heading {
+	margin: 8px 0 24px;
+	padding: 25px 28px;
+	border: 1px solid #dce8df;
+	border-left: 5px solid #347556;
+	border-radius: 8px;
+	background: linear-gradient(110deg, #eef6f0 0%, #fff 72%);
+}
+.seller-assignments-page .seller-assignments-heading h1 { margin: 0; color: #24483b; font-size: 27px; }
+.seller-assignments-page .seller-assignment-subtitle { margin: 6px 0 0; color: #66776c; font-size: 14px; }
+.seller-assignments-page .seller-assignment-table-container {
+	overflow: visible;
+	border: 0;
+	background: transparent;
+}
+.seller-assignments-page .seller-assignments-table {
+	display: block;
+	width: 100%;
+	min-width: 0;
+	border-collapse: separate;
+}
+.seller-assignments-page .seller-assignments-table thead,
+.seller-assignments-page .seller-assignments-table tbody { display: block; }
+.seller-assignments-page .seller-assignments-table thead tr,
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id] {
+	display: grid;
+	grid-template-columns: minmax(110px, .5fr) minmax(130px, .55fr) minmax(0, 3.4fr);
+	align-items: stretch;
+}
+.seller-assignments-page .seller-assignments-table thead tr { margin-bottom: 8px; }
+.seller-assignments-page .seller-assignments-table thead { background: transparent; }
+.seller-assignments-page .seller-assignments-table thead tr { border-radius: 6px; background: #f4ecdf; }
+.seller-assignments-page .seller-assignments-table thead th {
+	padding: 0 18px 4px;
+	border: 0;
+	background: transparent;
+	color: #718076;
+	font-size: 11px;
+	font-weight: 800;
+	text-align: left;
+}
+.seller-assignments-page .seller-assignments-table tbody { display: grid; gap: 12px; }
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id] {
+	overflow: hidden;
+	border: 1px solid #dfe8e2;
+	border-left: 4px solid #c69239;
+	border-radius: 8px;
+	background: #fff;
+	box-shadow: 0 4px 16px rgba(32, 63, 45, .06);
+	transition: border-color .18s ease, box-shadow .18s ease;
+}
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id]:has(.is-closed) { border-left-color: #347556; }
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id]:hover { background: #fff; box-shadow: 0 8px 22px rgba(32, 63, 45, .1); }
+.seller-assignments-page .seller-assignments-table tbody td {
+	min-width: 0;
+	padding: 20px 18px;
+	border: 0;
+	border-right: 1px solid #edf1ee;
+	background: #fff;
+	vertical-align: top;
+}
+.seller-assignments-page .seller-assignments-table tbody td:last-child { border-right: 0; }
+.seller-assignments-page .seller-assignment-date { color: #58695e; font-size: 14px; }
+.seller-assignments-page .seller-assigned-units { color: #24483b; font-size: 30px; }
+.seller-assignments-page .seller-units-caption { color: #78877d; }
+.seller-assignments-page .seller-assignment-status { margin-bottom: 10px; border-radius: 4px; }
+.seller-assignments-page .seller-closeout-form {
+	padding: 20px;
+	border-color: #eadcc7;
+	border-radius: 7px;
+	background: #fffaf3;
+}
+.seller-assignments-page .seller-closeout-form .recipe-form-grid { gap: 12px; margin-bottom: 0; }
+.seller-assignments-page .seller-closeout-form {
+	display: grid;
+	grid-template-columns: minmax(96px, .8fr) minmax(96px, .8fr) minmax(180px, 1.8fr) minmax(96px, .9fr) max-content;
+	align-items: end;
+	gap: 14px;
+}
+.seller-assignments-page .seller-closeout-form .recipe-form-grid { display: contents; }
+.seller-assignments-page .seller-closeout-form .recipe-form-group { min-width: 0; }
+.seller-assignments-page .seller-closeout-form .seller-incident-group { grid-column: auto; }
+.seller-assignments-page .seller-closeout-form .seller-incident-group textarea {
+	height: 44px;
+	min-height: 44px;
+	max-height: 80px;
+	padding: 10px 12px;
+	resize: vertical;
+}
+.seller-assignments-page .seller-closeout-form .recipe-form-group label {
+	display: flex;
+	min-height: 2.4em;
+	align-items: flex-end;
+	margin-bottom: 8px;
+	color: #654a2e;
+	font-size: 11px;
+	font-weight: 800;
+	line-height: 1.2;
+}
+.seller-assignments-page .seller-closeout-form input,
+.seller-assignments-page .seller-closeout-form select,
+.seller-assignments-page .seller-closeout-form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	min-width: 0;
+	min-height: 44px;
+	padding: 10px 12px;
+	border: 1px solid #ddc9aa;
+	border-radius: 5px;
+	background: #fffefa;
+	color: #3f382f;
+	font-size: 13px;
+	transition: border-color .16s ease, box-shadow .16s ease, background-color .16s ease;
+}
+.seller-assignments-page .seller-closeout-form input:focus,
+.seller-assignments-page .seller-closeout-form select:focus,
+.seller-assignments-page .seller-closeout-form textarea:focus {
+	outline: none;
+	border-color: #b87932;
+	background: #fff;
+	box-shadow: 0 0 0 3px rgba(184, 121, 50, .16);
+}
+.seller-assignments-page .seller-closeout-form .recipe-primary-button {
+	min-height: 44px;
+	margin: 0;
+	padding: 9px 16px;
+	border-radius: 5px;
+	background: #347556;
+	white-space: nowrap;
+}
+.seller-assignments-page .seller-closeout-form .recipe-primary-button:hover { background: #285d43; }
+.seller-assignments-page .seller-close-summary p { border-color: #e1e9e4; background: #f7faf8; }
+.seller-assignments-page .seller-incident { border-radius: 0 5px 5px 0; }
+.seller-assignments-page .seller-assignments-table tbody tr:not([data-assignment-id]) { display: block; }
+.seller-assignments-page .seller-assignments-table tbody tr:not([data-assignment-id]) td {
+	padding: 30px 18px;
+	border: 1px dashed #d7e2da;
+	border-radius: 8px;
+	background: #f8faf8;
+	color: #66776c;
+	text-align: center;
+}
+
+@media (max-width: 760px) {
+	.seller-assignments-page .seller-assignments-heading { padding: 22px 20px; }
+	.seller-assignments-page .seller-assignments-table thead { display: none; }
+	.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id] {
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+	.seller-assignments-page .seller-assignments-table tbody td {
+		padding: 14px 16px;
+		border-right: 0;
+	}
+	.seller-assignments-page .seller-assignments-table tbody td::before {
+		display: block;
+		margin-bottom: 8px;
+		color: #77877c;
+		font-size: 10px;
+		font-weight: 800;
+	}
+	.seller-assignments-page .seller-assignments-table tbody td[data-label="Fecha"]::before { content: "Fecha"; }
+	.seller-assignments-page .seller-assignments-table tbody td[data-label="Panes asignados"]::before { content: "Panes asignados"; }
+	.seller-assignments-page .seller-assignments-table tbody td[data-label="Cierre e incidencia"] {
+		grid-column: 1 / -1;
+		border-top: 1px solid #edf1ee;
+	}
+	.seller-assignments-page .seller-assignments-table tbody td[data-label="Cierre e incidencia"]::before { content: "Cierre e incidencia"; }
+	.seller-assignments-page .seller-closeout-form { display: block; }
+	.seller-assignments-page .seller-closeout-form .recipe-form-grid {
+		display: grid;
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+		gap: 12px;
+	}
+	.seller-assignments-page .seller-closeout-form .seller-incident-group { grid-column: 1 / -1; }
+	.seller-assignments-page .seller-closeout-form .recipe-primary-button { margin-top: 12px; }
+}
+
+@media (max-width: 480px) {
+	.seller-assignments-page .seller-assignments-heading { margin-top: 0; padding: 18px 16px; }
+	.seller-assignments-page .seller-assignments-heading h1 { font-size: 23px; }
+	.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id] { grid-template-columns: 1fr; }
+	.seller-assignments-page .seller-assignments-table tbody td[data-label="Cierre e incidencia"] { grid-column: auto; }
+	.seller-assignments-page .seller-closeout-form .recipe-form-grid { grid-template-columns: 1fr; }
+	.seller-assignments-page .seller-closeout-form .seller-incident-group { grid-column: auto; }
+	.seller-assignments-page .seller-closeout-form .recipe-primary-button { width: 100%; }
+	.seller-assignments-page .seller-close-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.seller-assignments-page .seller-close-summary p { padding: 8px; }
+}
+
+.sale-create-card {
+	width: min(1020px, calc(100vw - 40px));
+	height: auto;
+	max-height: calc(100dvh - 40px);
+	padding: 0;
+	border: 1px solid #d9c39f;
+	border-radius: 8px;
+	background: #fffdf8;
+	box-shadow: 0 24px 64px rgba(48, 37, 24, .24);
+}
+.sale-create-card > .recipe-modal-heading {
+	flex: 0 0 auto;
+	margin: 0;
+	padding: 22px 30px 18px;
+	border-bottom: 1px solid #e9ddc9;
+	background: #f7f0e3;
+}
+.sale-create-card > .recipe-modal-heading h2 { color: #604728; font-size: 22px; }
+.sale-create-card #sale-form {
+	flex: 1 1 auto;
+	min-height: 0;
+	gap: 0;
+	padding: 24px 30px 28px;
+	overflow-y: auto;
+}
+.sale-create-card .recipe-form-grid { gap: 16px; margin-bottom: 20px; }
+.sale-create-card .recipe-form-group label { color: #654a2e; font-weight: 700; }
+.sale-create-card .recipe-form-grid input,
+.sale-create-card .recipe-form-grid select {
+	min-height: 46px;
+	padding: 10px 12px;
+	border-color: #ddc9aa;
+	border-radius: 5px;
+	background: #fffefa;
+	color: #3f382f;
+}
+.sale-create-card .recipe-form-grid input:focus,
+.sale-create-card .recipe-form-grid select:focus {
+	border-color: #b87932;
+	box-shadow: 0 0 0 3px rgba(184, 121, 50, .15);
+}
+.sale-create-card .sale-vendor-toggle { justify-content: center; }
+.sale-create-card .sale-vendor-toggle label {
+	display: inline-flex;
+	align-items: center;
+	gap: 9px;
+	min-height: 42px;
+	color: #365447;
+	cursor: pointer;
+}
+.sale-create-card #sale-is-vendedor {
+	width: 17px;
+	min-height: 17px;
+	margin: 0;
+	accent-color: #236a52;
+}
+.sale-create-card #sale-seller-block { padding: 12px 14px; border: 1px solid #e1e9e4; border-radius: 5px; background: #f7faf8; }
+.sale-create-card #sale-seller:disabled { background: #edf1ee; color: #78847c; cursor: not-allowed; }
+.sale-create-card #sale-discount:disabled { background: #edf1ee; color: #78847c; cursor: not-allowed; }
+.sale-create-card .sales-add-item {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 140px 132px;
+	align-items: end;
+	gap: 16px;
+	margin: 0 0 18px;
+	padding: 18px;
+	border: 1px solid #eadcc7;
+	border-radius: 6px;
+	background: #fbf6ed;
+}
+.sale-create-card .sales-add-item .recipe-form-group { min-width: 0; }
+.sale-create-card .sales-product-select,
+.sale-create-card .sales-quantity { width: auto; max-width: none; flex: initial; }
+.sale-create-card .sales-add-item select,
+.sale-create-card .sales-add-item input { min-height: 46px; border: 1px solid #ddc9aa; border-radius: 5px; background: #fffefa; }
+.sale-create-card .sales-add-item button { min-height: 46px; white-space: nowrap; }
+.sale-create-card .sales-lines-container {
+	flex: 0 1 auto;
+	height: auto;
+	min-height: 120px;
+	max-height: min(38vh, 320px);
+	margin: 0;
+	border: 1px solid #e3d6c1;
+	border-radius: 5px;
+	background: #fffefa;
+}
+.sale-create-card .sales-lines-container .recipe-table { min-width: 620px; }
+.sale-create-card .sales-lines-container th { position: sticky; top: 0; background: #f4ecdf; color: #654a2e; }
+.sale-create-card .sales-lines-container td { vertical-align: middle; overflow-wrap: anywhere; }
+.sale-create-card .sales-total-line { margin: 10px 0 0; color: #58685f; }
+.sale-create-card .sales-total-line strong { color: #33483c; }
+.sale-create-card .sale-grand-total {
+	margin-top: 12px;
+	padding-top: 14px;
+	border-top: 1px solid #e3d6c1;
+	font-size: 16px;
+}
+.sale-create-card .sale-grand-total strong { color: #347556; font-size: 23px; }
+.sale-create-card .sales-inline-error { padding: 9px 11px; border-radius: 4px; background: #fff3f1; }
+.sale-create-card .recipe-modal-actions {
+	position: sticky;
+	bottom: -20px;
+	flex: 0 0 auto;
+	margin-top: 16px;
+	padding: 14px 0 0;
+	border-top: 1px solid #e5ece7;
+	background: #fff;
+}
+
+.local-order-client-card {
+	width: min(500px, calc(100vw - 32px));
+	height: auto;
+	min-height: 0;
+	max-height: calc(100dvh - 32px);
+	overflow: visible;
+}
+
+.local-order-client-card .recipe-form-grid {
+	grid-template-columns: 1fr;
+}
+
+.local-order-client-card .recipe-modal-actions {
+	position: static;
+	margin-top: 18px;
+}
+
+.local-client-picker {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	align-items: end;
+	gap: 8px;
+	margin: 8px 0 14px;
+}
+
+.local-client-picker select {
+	width: 100%;
+	min-width: 0;
+	min-height: 44px;
+	padding: 9px 11px;
+	border: 1px solid #d5c7b5;
+	border-radius: 5px;
+	font: inherit;
+}
+
+.local-client-picker button {
+	min-height: 44px;
+	white-space: nowrap;
+}
+
+.sales-client-search-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	gap: 8px;
+	align-items: start;
+}
+
+.sales-client-combobox-wrap {
+	position: relative;
+	min-width: 0;
+}
+
+.sales-client-combobox-wrap > input {
+	width: 100%;
+	min-height: 46px;
+	padding: 10px 40px 10px 13px;
+	border: 1px solid #cdbca8;
+	border-radius: 7px;
+	background: #fffdfa;
+	box-shadow: inset 0 1px 2px rgba(74, 53, 37, .04);
+	color: #332820;
+	font-size: 14px;
+	line-height: 1.25;
+	box-sizing: border-box;
+}
+
+.sales-client-combobox-wrap > input:focus {
+	border-color: #8b5a2b;
+	box-shadow: 0 0 0 3px rgba(139, 90, 43, .14);
+	outline: none;
+}
+
+.sales-client-combobox-wrap::after {
+	position: absolute;
+	top: 50%;
+	right: 14px;
+	width: 7px;
+	height: 7px;
+	border-right: 2px solid #8b5a2b;
+	border-bottom: 2px solid #8b5a2b;
+	content: '';
+	pointer-events: none;
+	transform: translateY(-65%) rotate(45deg);
+}
+
+.sales-client-search-row input {
+	width: 100%;
+	min-height: 44px;
+	padding: 9px 11px;
+	border: 1px solid #d5c7b5;
+	border-radius: 5px;
+	background: #fffdfb;
+	color: #302418;
+	font: inherit;
+	box-sizing: border-box;
+}
+
+.sales-client-search-row input::placeholder {
+	color: #927e6d;
+}
+
+.sales-client-search-row button {
+	min-height: 44px;
+	white-space: nowrap;
+}
+
+.sales-client-options {
+	position: absolute;
+	top: calc(100% + 4px);
+	left: 0;
+	right: 0;
+	z-index: 20;
+	max-height: 220px;
+	overflow-y: auto;
+	margin-top: 2px;
+	padding: 6px;
+	border: 1px solid #d8c8b7;
+	border-radius: 7px;
+	background: #fff;
+	box-shadow: 0 12px 24px rgba(48, 36, 24, .18);
+}
+
+.local-order-client-card .sales-client-options {
+	max-height: 220px;
+}
+
+.sales-client-option {
+	display: block;
+	width: 100%;
+	min-height: 40px;
+	padding: 9px 11px;
+	border: 0;
+	border-radius: 5px;
+	background: transparent;
+	color: #302418;
+	font: inherit;
+	font-size: 13px;
+	line-height: 1.3;
+	text-align: left;
+	cursor: pointer;
+}
+
+.sales-client-option[hidden] {
+	display: none;
+}
+
+/* --- FORMULARIO DE ENCARGO LOCAL --- */
+#local-order-modal .sale-create-card {
+	width: min(760px, calc(100vw - 40px));
+	height: auto;
+	max-height: calc(100dvh - 32px);
+	border: 2px solid #8b5a2b;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+	padding: 24px;
+	overflow-y: auto;
+}
+
+#local-order-modal .recipe-modal-heading {
+	margin-bottom: 20px;
+	padding: 0 0 16px;
+	border-bottom: 1px solid #eadfd5;
+	background: #fff;
+}
+
+#local-order-modal .recipe-modal-heading h2 {
+	color: #51351f;
+}
+
+#local-order-modal .recipe-form-group label {
+	color: #4a3525;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+#local-order-modal input,
+#local-order-modal select,
+#local-order-modal textarea {
+	min-height: 38px;
+	padding: 8px 10px;
+	border: 1px solid #d7ccc8;
+	border-radius: 8px;
+	background: #fff;
+	color: #333;
+	box-shadow: none;
+}
+
+#local-order-modal input:focus,
+#local-order-modal select:focus,
+#local-order-modal textarea:focus {
+	border-color: #8b5a2b;
+	box-shadow: 0 0 0 2px rgba(139, 90, 43, .15);
+	outline: none;
+}
+
+#local-order-modal .sale-origin-meta {
+	margin: 0 0 14px;
+	padding: 10px 12px;
+	border-color: #c9a477;
+	background: #fff;
+	color: #4a3525;
+}
+
+#local-order-modal .sales-add-item {
+	margin: 0 0 18px;
+	padding: 18px;
+	border-color: #c9a477;
+	border-radius: 6px;
+	background: #fff;
+}
+
+#local-order-modal .sales-lines-container {
+	margin-top: 4px;
+	border-color: #d7bd9c;
+	background: #fff;
+}
+
+#local-order-modal .recipe-table thead th {
+	background: #fff;
+	color: #5b3d25;
+}
+
+#local-order-modal .recipe-table tbody td {
+	border-color: #eee1cf;
+	color: #4a3525;
+}
+
+#local-order-modal .sales-total-line {
+	color: #684a31;
+}
+
+#local-order-modal .sales-total-line strong {
+	color: #8b5a2b;
+}
+
+#local-order-modal .sales-inline-error {
+	border: 1px solid #e0bd91;
+	background: #fff4e3;
+	color: #85501f;
+}
+
+#local-order-modal .recipe-modal-actions {
+	margin-top: 16px;
+	padding-top: 14px;
+	border-top-color: #eadfd5;
+}
+
+.local-order-deposit-actions {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 14px;
+	flex-wrap: wrap;
+}
+
+.local-order-deposit-actions p {
+	margin: 0;
+	color: #684a31;
+	font-size: 13px;
+}
+
+#local-order-deposit-modal .local-order-deposit-card {
+	width: min(440px, calc(100vw - 32px));
+	height: auto;
+	max-height: calc(100dvh - 32px);
+	padding: 24px;
+	border: 2px solid #8b5a2b;
+	border-radius: 12px;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .24);
+}
+
+.local-order-deposit-total,
+.local-order-deposit-balance {
+	display: flex;
+	justify-content: space-between;
+	gap: 12px;
+	margin: 0 0 18px;
+	color: #684a31;
+}
+
+.local-order-deposit-balance {
+	margin: 16px 0 0;
+	font-weight: 600;
+}
+
+.local-order-deposit-card .recipe-form-group input {
+	width: 100%;
+	min-height: 44px;
+	padding: 9px 11px;
+	border: 1px solid #c9b29d;
+	border-radius: 5px;
+	font: inherit;
+}
+
+/* --- MODAL NUEVA VENTA LOCAL --- */
+#sale-modal .sale-create-card {
+	width: min(760px, calc(100vw - 40px));
+	height: auto;
+	max-height: calc(100dvh - 32px);
+	padding: 24px;
+	border: 2px solid #8b5a2b;
+	border-radius: 20px;
+	background: #fff;
+	box-shadow: 0 8px 24px rgba(0, 0, 0, .3);
+}
+
+#sale-modal .sale-create-card > .recipe-modal-heading {
+	margin-bottom: 20px;
+	padding: 0 0 16px;
+	border-bottom: 1px solid #eadfd5;
+	background: #fff;
+}
+
+#sale-modal .sale-create-card > .recipe-modal-heading h2 {
+	color: #4a3525;
+	font-size: 22px;
+}
+
+#sale-modal .sale-create-card #sale-form {
+	padding: 0;
+	background: #fff;
+}
+
+#sale-modal .sale-create-card .recipe-form-group label {
+	color: #4a3525;
+	font-size: 13px;
+	font-weight: 600;
+	letter-spacing: normal;
+	text-transform: none;
+}
+
+#sale-modal .sale-create-card input,
+#sale-modal .sale-create-card select,
+#sale-modal .sale-create-card textarea {
+	border-color: #d7ccc8;
+	border-radius: 8px;
+	background: #fff;
+	color: #333;
+	box-shadow: none;
+}
+
+#sale-modal .sale-create-card input:focus,
+#sale-modal .sale-create-card select:focus,
+#sale-modal .sale-create-card textarea:focus {
+	border-color: #8b5a2b;
+	box-shadow: 0 0 0 2px rgba(139, 90, 43, .15);
+	outline: none;
+}
+
+#sale-modal .sale-create-card .sales-add-item {
+	border-color: #eadfd5;
+	background: #fff;
+}
+
+#sale-modal .sale-create-card .sales-lines-container {
+	border-color: #d7ccc8;
+	background: #fff;
+}
+
+#sale-modal .sale-create-card .sales-lines-container th {
+	background: #fff;
+	color: #5b3d25;
+}
+
+#sale-modal .sale-create-card .sales-lines-container td {
+	border-color: #eee8e2;
+	color: #4a3525;
+}
+
+#sale-modal .sale-create-card .sales-total-line,
+#sale-modal .sale-create-card .sales-total-line strong {
+	color: #4a3525;
+}
+
+#sale-modal .sale-create-card .sales-inline-error {
+	border: 1px solid #d7ccc8;
+	background: #fff;
+	color: #8c3025;
+}
+
+#sale-modal .sale-create-card .recipe-modal-actions {
+	margin-top: 16px;
+	padding-top: 14px;
+	border-top-color: #eadfd5;
+	background: #fff;
+}
+
+#sale-modal .sale-create-card .recipe-primary-button {
+	border-color: #8b5a2b;
+	background: #8b5a2b;
+}
+
+#sale-modal .sale-create-card .recipe-primary-button:hover {
+	border-color: #6d441f;
+	background: #6d441f;
+}
+
+#sale-modal .sale-create-card .recipe-secondary-button {
+	border-color: #d7ccc8;
+	background: #fff;
+	color: #4a3525;
+}
+
+#local-order-modal .recipe-primary-button {
+	border-color: #8b5a2b;
+	background: #8b5a2b;
+	box-shadow: 0 3px 8px rgba(139, 90, 43, .2);
+}
+
+#local-order-modal .recipe-primary-button:hover {
+	border-color: #6d441f;
+	background: #6d441f;
+}
+
+#local-order-modal .recipe-secondary-button {
+	border-color: #d2b28d;
+	background: #fffdf9;
+	color: #684a31;
+}
+
+#local-order-modal .recipe-secondary-button:hover {
+	background: #f7ecdc;
+}
+
+.sales-client-option:hover,
+.sales-client-option:focus-visible {
+	background: #f3eadf;
+	outline: none;
+}
+
+.local-client-selected {
+	margin: 0 0 12px;
+	color: #347556;
+	font-weight: 700;
+}
+
+@media (max-width: 560px) {
+	.sale-create-card { width: calc(100vw - 24px); max-height: calc(100dvh - 24px); }
+	.local-client-picker { grid-template-columns: 1fr; }
+	.local-client-picker button { width: 100%; }
+	.sales-client-search-row { grid-template-columns: 1fr; }
+	.sales-client-search-row button { width: 100%; }
+	.sale-create-card > .recipe-modal-heading { padding: 17px 18px 14px; }
+	.sale-create-card #sale-form { padding: 16px 18px 18px; }
+	.sale-create-card .sales-add-item { grid-template-columns: minmax(0, 1fr) 100px; gap: 12px; padding: 14px; }
+	.sale-create-card .sales-product-select { grid-column: 1 / -1; }
+	.sale-create-card .sales-add-item button { grid-column: 1 / -1; align-self: end; width: 100%; }
+	.sale-create-card .sales-lines-container { max-height: 25vh; }
+	.sale-create-card .recipe-modal-actions { bottom: -18px; }
+}
+
+@media (max-width: 420px) {
+	.sale-create-card .recipe-form-grid { grid-template-columns: 1fr; }
+	.sale-create-card .sale-vendor-toggle,
+	.sale-create-card #sale-seller-block { grid-column: 1; }
+}
+
+.seller-assignments-page .seller-closeout-form {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+.seller-product-closeout-list { display: grid; gap: 9px; min-width: 0; }
+.seller-product-closeout-row {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 100px 100px;
+	align-items: end;
+	gap: 12px;
+	min-width: 0;
+	padding: 11px 13px;
+	border: 1px solid #eadcc7;
+	border-radius: 6px;
+	background: #fffefa;
+}
+.seller-product-line-meta { display: flex; min-width: 0; flex-direction: column; gap: 4px; padding-bottom: 4px; }
+.seller-product-line-meta strong { overflow-wrap: anywhere; color: #4b3b29; font-size: 13px; }
+.seller-product-line-meta small { color: #7d6a52; font-size: 11px; }
+.seller-closeout-line-input { min-width: 0; }
+.seller-assignments-page .seller-closeout-form .seller-closeout-line-input label {
+	min-height: 0;
+	margin-bottom: 5px;
+	font-size: 10px;
+}
+.seller-closeout-footer {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) 120px max-content;
+	align-items: end;
+	gap: 12px;
+	padding-top: 12px;
+	border-top: 1px solid #eadcc7;
+}
+.seller-closeout-footer .seller-incident-group { grid-column: auto; }
+.seller-closeout-footer .recipe-primary-button { margin: 0; }
+.seller-product-close-summary { display: grid; gap: 8px; margin-bottom: 10px; }
+.seller-product-close-summary p {
+	display: grid;
+	grid-template-columns: minmax(120px, 1.4fr) repeat(3, minmax(70px, 1fr));
+	align-items: center;
+	gap: 10px;
+	margin: 0;
+	padding: 10px 12px;
+	border: 1px solid #e3d6c1;
+	border-radius: 5px;
+	background: #fffaf3;
+	color: #6a5945;
+	font-size: 12px;
+}
+.seller-product-close-summary strong { color: #4b3b29; }
+.seller-product-close-summary span { white-space: nowrap; }
+
+.seller-assignments-page {
+	--bakery-ink: #4a3424;
+	--bakery-copy: #755a40;
+	--bakery-line: #ead8bd;
+	--bakery-cream: #fffaf1;
+	--bakery-dough: #f7ead4;
+	--bakery-crust: #795333;
+	--bakery-crust-dark: #563a25;
+	color: var(--bakery-ink);
+}
+
+.seller-assignments-page .seller-assignments-heading {
+	border-color: #6a482f;
+	border-left-color: #d3a15f;
+	background: linear-gradient(110deg, #5b3b29 0%, #795638 100%);
+}
+
+.seller-assignments-page .seller-assignments-heading h1,
+.seller-assignments-page .seller-assignments-heading h1 { color: #fff8ed; }
+.seller-assignments-page .seller-assigned-units { color: var(--bakery-ink); }
+
+.seller-assignments-page .seller-assignments-heading .seller-assignment-subtitle { color: #ead9c4; }
+
+.seller-assignments-page .seller-assignment-date,
+.seller-assignments-page .seller-units-caption { color: var(--bakery-copy); }
+
+.seller-assignments-page .sales-tabs-nav { border-bottom-color: var(--bakery-line); }
+.seller-assignments-page .sales-tab-btn.active,
+.seller-assignments-page .sales-tab-btn:hover { color: var(--bakery-crust-dark); }
+.seller-assignments-page .sales-tab-btn.active { border-bottom-color: var(--bakery-crust); }
+.seller-assignments-page .sales-tab-btn .sales-badge-count {
+	background: var(--bakery-dough);
+	color: var(--bakery-ink);
+}
+
+.seller-assignments-page .seller-assignments-table thead tr { background: var(--bakery-dough); }
+.seller-assignments-page .seller-assignments-table thead th { color: var(--bakery-copy); }
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id] {
+	border-color: var(--bakery-line);
+	border-left-color: #c17a36;
+	box-shadow: 0 4px 16px rgba(74, 52, 36, .07);
+}
+.seller-assignments-page .seller-assignments-table tbody tr[data-assignment-id]:hover {
+	box-shadow: 0 8px 22px rgba(74, 52, 36, .12);
+}
+.seller-assignments-page .seller-assignments-table tbody td { border-right-color: #f1e7d8; }
+.seller-assignments-page .seller-closeout-form {
+	border-color: var(--bakery-line);
+	background: var(--bakery-cream);
+}
+.seller-assignments-page .seller-closeout-form .recipe-form-group label { color: var(--bakery-copy); }
+.seller-assignments-page .seller-closeout-form input,
+.seller-assignments-page .seller-closeout-form select,
+.seller-assignments-page .seller-closeout-form textarea {
+	border-color: #dfc8a7;
+	background: #fffdf9;
+	color: var(--bakery-ink);
+}
+.seller-assignments-page .seller-closeout-form input:focus,
+.seller-assignments-page .seller-closeout-form select:focus,
+.seller-assignments-page .seller-closeout-form textarea:focus {
+	border-color: var(--bakery-crust);
+	box-shadow: 0 0 0 3px rgba(168, 92, 39, .16);
+}
+.seller-assignments-page .seller-closeout-form .recipe-primary-button { background: var(--bakery-crust); }
+.seller-assignments-page .seller-closeout-form .recipe-primary-button:hover { background: var(--bakery-crust-dark); }
+.seller-assignments-page .seller-close-summary p {
+	border-color: var(--bakery-line);
+	background: var(--bakery-cream);
+}
+.seller-assignments-page .seller-close-summary strong { color: var(--bakery-ink); }
+.seller-assignments-page .seller-assignments-table tbody tr:not([data-assignment-id]) td {
+	border-color: #dfc8a7;
+	background: var(--bakery-cream);
+	color: var(--bakery-copy);
+}
+
+@media (max-width: 760px) {
+	.seller-assignments-page .seller-closeout-form { display: flex; }
+	.seller-product-closeout-row { grid-template-columns: minmax(0, 1fr) 90px 90px; gap: 9px; padding: 9px; }
+	.seller-closeout-footer { grid-template-columns: minmax(0, 1fr) 110px; gap: 10px; }
+	.seller-closeout-footer .seller-incident-group,
+	.seller-closeout-footer .recipe-primary-button { grid-column: 1 / -1; }
+	.seller-product-close-summary p { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+	.seller-product-close-summary strong { grid-column: 1 / -1; }
+}
+
+@media (max-width: 480px) {
+	.seller-product-closeout-row { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+	.seller-product-line-meta { grid-column: 1 / -1; }
+	.seller-closeout-footer { grid-template-columns: 1fr; }
+	.seller-closeout-footer .seller-incident-group,
+	.seller-closeout-footer .recipe-primary-button { grid-column: auto; }
+	.seller-product-close-summary p { grid-template-columns: 1fr; gap: 4px; }
+	.seller-product-close-summary strong { grid-column: auto; }
+}

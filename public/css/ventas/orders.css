@@ -1,0 +1,132 @@
+.sales-heading-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sales-orders-card {
+    width: min(900px, 100%);
+    padding: 0;
+}
+
+.sales-orders-card > .recipe-modal-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 24px;
+}
+
+.sales-orders-list {
+    max-height: 68vh;
+    overflow-y: auto;
+    padding: 0 24px 20px;
+}
+
+.sales-pending-order {
+    margin-bottom: 14px;
+    padding: 16px;
+    border: 1px solid #e2d8cf;
+    border-radius: 8px;
+    background: #fffdfa;
+}
+
+.sales-pending-order > header,
+.sales-pending-order > header > div,
+.sales-pending-order li,
+.sales-process-order-form {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+}
+
+.sales-pending-order h3 {
+    margin: 0 0 5px;
+    color: #4a3525;
+    font-size: 16px;
+}
+
+.sales-pending-order p,
+.sales-pending-order small {
+    display: block;
+    margin: 4px 0;
+    color: #65605b;
+}
+
+.sales-pending-order > header > strong {
+    color: #4a3525;
+    white-space: nowrap;
+}
+
+.sales-pending-order ul {
+    margin: 12px 0;
+    padding: 0;
+    list-style: none;
+}
+
+.sales-pending-order li {
+    padding: 7px 0;
+    border-bottom: 1px solid #f0e6df;
+    color: #4a3525;
+}
+
+.sales-process-order-form {
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.sales-process-order-form label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #4a3525;
+    font-size: 14px;
+}
+
+.sales-process-order-form input {
+    min-height: 38px;
+    padding: 7px 9px;
+    border: 1px solid #d7ccc8;
+    border-radius: 5px;
+    color: #332820;
+    font: inherit;
+}
+
+.sales-orders-empty {
+    padding: 28px 12px;
+    text-align: center;
+}
+
+@media (max-width: 700px) {
+    .sales-heading-actions {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .sales-heading-actions button {
+        width: 100%;
+    }
+
+    .sales-orders-card > .recipe-modal-heading {
+        padding: 16px;
+    }
+
+    .sales-orders-list {
+        max-height: 70vh;
+        padding: 0 16px 16px;
+    }
+
+    .sales-pending-order > header {
+        align-items: flex-start;
+    }
+
+    .sales-process-order-form {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .sales-process-order-form label {
+        align-items: stretch;
+        flex-direction: column;
+    }
+}
